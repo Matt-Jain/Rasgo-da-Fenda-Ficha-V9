@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Rasgo da Fenda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<section id="login" class="screen">
+  <div class="login-box">
+    <h1>RASGO DA FENDA</h1>
+    <p>Aegis — O Despertar</p>
+    <input id="playerNameLogin" placeholder="Seu nome">
+    <button onclick="enterApp()">Entrar</button>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="screen hidden">
+  <div class="menu-box">
+    <button onclick="go('create')">Criar Personagem</button>
+    <button onclick="go('characters')">Personagens</button>
+    <button onclick="go('dados')">Dados</button>
+  </div>
+</section>
+
+<!-- CRIAR ETAPA 1 -->
+<section id="create" class="screen hidden">
+  <div class="paper">
+    <h2>Identidade</h2>
+    <input id="charName" placeholder="Nome do personagem">
+    <input id="playerName" placeholder="Nome do jogador">
+    <textarea id="appearance" placeholder="Aparência"></textarea>
+    <textarea id="history" placeholder="História"></textarea>
+    <textarea id="goals" placeholder="Ambição"></textarea>
+    <button onclick="goSkills()">Prosseguir</button>
+  </div>
+</section>
+
+<!-- CRIAR ETAPA 2 -->
+<section id="skillsScreen" class="screen hidden">
+  <div class="paper">
+    <h2>Perícias</h2>
+    <p>Pontos restantes: <span id="points">200</span></p>
+    <div id="skills"></div>
+    <button onclick="finish()">Finalizar</button>
+  </div>
+</section>
+
+<!-- PERSONAGENS -->
+<section id="characters" class="screen hidden">
+  <div class="paper">
+    <h2>Personagens</h2>
+    <div id="charList"></div>
+    <button onclick="go('menu')">Voltar</button>
+  </div>
+</section>
+
+<!-- DADOS -->
+<section id="dados" class="screen hidden">
+  <div class="paper">
+    <h2>Dados</h2>
+    <select id="diceChar" onchange="renderDice()"></select>
+    <div id="diceSkills"></div>
+    <div id="diceBox">
+      <div id="dice">🎲</div>
+      <div id="diceResult"></div>
+    </div>
+    <button onclick="go('menu')">Voltar</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
