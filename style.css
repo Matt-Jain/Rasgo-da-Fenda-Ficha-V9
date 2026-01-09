@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  background: url("assets/forest.jpg") center/cover no-repeat fixed;
+  font-family: Arial, sans-serif;
+}
+
+.screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+}
+
+.hidden { display: none; }
+
+.login-box, .menu-box {
+  background: rgba(0,0,0,0.7);
+  padding: 30px;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+}
+
+.menu-box button {
+  display: block;
+  margin: 10px auto;
+  width: 220px;
+}
+
+.paper {
+  background: #f4f1e8;
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.skill {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+}
+
+#dice {
+  font-size: 60px;
+  animation: spin 0.6s linear;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
